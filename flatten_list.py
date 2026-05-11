@@ -16,4 +16,13 @@ def flat(b,res):
         else:
             res.append(item)
     return res
-print(flat(b,res))
+# print(flat(b,res))
+
+def flat2(b,res):
+    for item  in b:
+        if isinstance(item,list):
+            flat2(item,res)
+        else:
+            res.append(item)
+    return res
+print(flat2(b,[]))

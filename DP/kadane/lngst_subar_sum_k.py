@@ -26,10 +26,10 @@ def lngstarr(arr,k):
         if cur_sum-k in pre_sum:
             for st in pre_sum[cur_sum-k]:
                 res.append(arr[st+1:i+1])
-        if cur_sum-k not in pre_sum:
-            pre_sum[cur_sum-k]=i
+        if cur_sum not in pre_sum:
+            pre_sum[cur_sum]=i
         else:
-            pre_sum[cur_sum-k].append(i)
+            pre_sum[cur_sum].append(i)
     print(res)
 
 arr=[-5, 8, -14, 2, 4, 12]
